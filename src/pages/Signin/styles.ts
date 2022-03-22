@@ -2,14 +2,14 @@ import styled, {css} from 'styled-components/native';
 import {theme} from '../../styles/theme';
 import {Dimensions} from 'react-native';
 
-const {width, height} = Dimensions.get('screen');
+const {width} = Dimensions.get('screen');
 
 export const SafeAreaView = styled.SafeAreaView``;
 
 export const Wrapper = styled.View`
   padding: 0 15px;
   justify-content: space-around;
-  height: ${height}px;
+  height: 100%;
   background-color: ${theme.Colors.Backgroud};
 `;
 
