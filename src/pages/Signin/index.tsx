@@ -56,7 +56,7 @@ export default function Signin() {
               navigation={navigation}
             />
 
-            <MyLink screen="SignUp" title="Cadastrar" navigation={navigation} />
+            <MyLink screen="Signup" title="Cadastrar" navigation={navigation} />
           </S.SignupForgotPassword>
         </S.Form>
         <S.Footer>

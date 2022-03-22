@@ -9,9 +9,9 @@ import MyLink from './MyLink';
 // import InputText from './InputText';
 // import Loading from './Loading';
 // import Title from './Title';
-// import Address from './signup/Address';
-// import UseInfo from './signup/UseInfo';
-// import Rede from './signup/Rede';
+import Address from './signup/Address';
+import UseInfo from './signup/UseInfo';
+import Rede from './signup/Rede';
 // import CardPurchaseDetails from './CardPurchaseDetails';
 // import CardNotification from './CardNotification';
 // import LinkWhatsapp from './LinkWhatsapp';
@@ -21,7 +21,7 @@ import MyLink from './MyLink';
 export {
   Buttom,
   MyLink,
-  // Address,
+  Address,
   // Base,
   // Card,
   // CardPurchase,
@@ -31,8 +31,8 @@ export {
   // InputText,
   // Loading,
   // Title,
-  // UseInfo,
-  // Rede,
+  UseInfo,
+  Rede,
   // CardPurchaseDetails,
   // CardNotification,
   // LinkWhatsapp,
