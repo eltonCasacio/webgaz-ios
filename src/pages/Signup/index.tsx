@@ -3,11 +3,11 @@ import React, {useEffect, useState} from 'react';
 import {Alert, ScrollView} from 'react-native';
 
 import {Buttom, UseInfo, Address, Rede} from '../../components';
-// import {signup} from '../../service/auth';
+import {signup} from '../../service/auth';
 import {CompanyProps} from '../../types/Company';
 import {toast} from '../../types/Utils';
 
-// import {useAuth} from '../../contexts/auth';
+import {useAuth} from '../../contexts/auth';
 
 const logo_com_nome = require('../../assets/logo-com-nome.png');
 const signup_step1 = require('../../assets/signup-step1.png');
@@ -23,30 +23,39 @@ enum STEP {
 const Signup: React.FC = ({navigation}: any) => {
   const [company, setCompany] = useState({} as CompanyProps);
   const [step, setStep] = useState<STEP>();
-  // const {showToast} = useAuth();
+  const {showToast} = useAuth();
 
   function showMessageAlert(param: toast) {
-    Alert.alert(param.message);
-    // showToast({
-    //   type: param.type,
-    //   title: param.title || 'Preencha Todos Os Campos',
-    //   message: param.message || 'Os Campos com * são Obrigatórios',
-    // });
+    showToast({
+      type: param.type,
+      title: param.title || 'Preencha Todos Os Campos',
+      message: param.message || 'Os Campos com * são Obrigatórios',
+    });
   }
 
   function nextStep() {
     if (step === STEP.step1) {
-      if (validateUseInfo()) setStep(STEP.step2);
+      if (validateUseInfo()) {
+        setStep(STEP.step2);
+      }
     }
     if (step === STEP.step2) {
-      if (validateAddress()) setStep(STEP.step3);
+      if (validateAddress()) {
+        setStep(STEP.step3);
+      }
     }
   }
 
   function goBack() {
-    if (step === STEP.step1) navigation.goBack();
-    if (step === STEP.step2) setStep(STEP.step1);
-    if (step === STEP.step3) setStep(STEP.step2);
+    if (step === STEP.step1) {
+      navigation.goBack();
+    }
+    if (step === STEP.step2) {
+      setStep(STEP.step1);
+    }
+    if (step === STEP.step3) {
+      setStep(STEP.step2);
+    }
   }
 
   function handleUpdateProps(nameProps: string, value: string) {
@@ -94,16 +103,18 @@ const Signup: React.FC = ({navigation}: any) => {
   }
 
   const handleConfirm = async () => {
-    if (!validateConfirm()) return;
-
+    if (!validateConfirm()) {
+      return;
+    }
+    Alert.alert('nao sei');
     company.isNetwork = company.networkName ? 'SIM' : 'NÃO';
-    // const res = await signup(company);
-    // showToast({
-    //   type: res.url === 'Signin' ? 'success' : 'error',
-    //   title: 'CADASTRAR EMPRESA',
-    //   message: res.message,
-    // });
-    //navigation.navigate(res.url);
+    const res = await signup(company);
+    showToast({
+      type: res.url === 'Signin' ? 'success' : 'error',
+      title: 'CADASTRAR EMPRESA',
+      message: res.message,
+    });
+    navigation.navigate(res.url);
   };
 
   useEffect(() => {
@@ -153,12 +164,12 @@ const Signup: React.FC = ({navigation}: any) => {
       <S.Footer>
         {step === STEP.step3 ? (
           <Buttom
-            color="buttonConfirm"
+            color="ButtonConfirm"
             title="SALVAR"
             callback={handleConfirm}
           />
         ) : (
-          <Buttom color="buttonDefault" title="PROXIMO" callback={nextStep} />
+          <Buttom color="ButtonDefault" title="PROXIMO" callback={nextStep} />
         )}
         <S.Goback onPress={goBack}>
           <S.GobackText>VOLTAR</S.GobackText>

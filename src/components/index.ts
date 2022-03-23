@@ -1,11 +1,11 @@
-// import Base from './Base';
+import Base from './Base';
 import Buttom from './Buttom';
 import MyLink from './MyLink';
 // import Card from './Card';
 // import CardPurchase from './CardPurchase';
 // import Divider from './Divider';
-// import Footer from './Footer';
-// import Header from './Header';
+import Footer from './Footer';
+import Header from './Header';
 // import InputText from './InputText';
 // import Loading from './Loading';
 // import Title from './Title';
@@ -22,12 +22,12 @@ export {
   Buttom,
   MyLink,
   Address,
-  // Base,
+  Base,
   // Card,
   // CardPurchase,
   // Divider,
-  // Footer,
-  // Header,
+  Footer,
+  Header,
   // InputText,
   // Loading,
   // Title,

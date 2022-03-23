@@ -5,7 +5,7 @@ import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('screen');
 const wFraction = width / width;
 
-export const Wrapper = styled.SafeAreaView`
+export const Wrapper = styled.View`
   flex: 1;
   justify-content: space-around;
   background-color: ${theme.Colors.Backgroud};

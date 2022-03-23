@@ -4,7 +4,7 @@ import * as S from './styles';
 export type ButtomProps = {
   title: string;
   callback: any;
-  color: 'buttonDefault' | 'buttonDanger' | 'buttonConfirm';
+  color: 'ButtonDefault' | 'ButtonDanger' | 'ButtonConfirm';
 };
 export default function index({title, callback, color}: ButtomProps) {
   return (

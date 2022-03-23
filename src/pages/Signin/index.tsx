@@ -1,11 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, {useState} from 'react';
-import {Alert} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
 import * as S from './styles';
+import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {Buttom, MyLink} from '../../components';
+import {useAuth} from '../../contexts/auth';
 
 const logo_com_nome = require('../../assets/logo-com-nome.png');
+
 export default function Signin() {
   const navigation = useNavigation();
   const [username, setUsername] = useState('');
@@ -16,8 +16,23 @@ export default function Signin() {
 
   const [messageError, setMessageError] = useState<string>();
 
-  function handleSignIn() {
-    Alert.alert('signin');
+  function validate() {
+    setUsernameError(!username);
+    setPasswordError(!password);
+
+    return !!username && !!password;
+  }
+
+  const {signIn, setUser} = useAuth();
+
+  async function handleSignIn() {
+    if (validate()) {
+      const response = await signIn({email: username, password});
+      setMessageError(!response && 'Usuário ou Senha Inválido');
+      if (response) {
+        setUser(response);
+      }
+    }
   }
 
   return (
@@ -61,7 +76,7 @@ export default function Signin() {
         </S.Form>
         <S.Footer>
           <Buttom
-            color="buttonDefault"
+            color="ButtonDefault"
             title="ENTRAR"
             callback={handleSignIn}
           />

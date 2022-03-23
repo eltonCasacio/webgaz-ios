@@ -1,9 +1,11 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import HomeScreen from '../pages/Home';
 import PurchaseScreen from '../pages/Purchase';
 import PurchaseShipping from '../pages/PurchaseShipping';
 import PurchaseConfirmation from '../pages/PurchaseConfirmation';
+import ProfileUser from '../pages/ProfileUser';
 
 const AppStack = createNativeStackNavigator();
 
@@ -26,6 +28,11 @@ const AppRoutes: React.FC = () => {
         name="confirmar-pedido"
         component={PurchaseConfirmation}
         options={{title: 'Confirmar Pedido'}}
+      />
+      <AppStack.Screen
+        name="perfil"
+        component={ProfileUser}
+        options={{title: 'Perfil'}}
       />
     </AppStack.Navigator>
   );
