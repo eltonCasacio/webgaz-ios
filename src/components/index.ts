@@ -1,9 +1,9 @@
 import Base from './Base';
 import Buttom from './Buttom';
 import MyLink from './MyLink';
-// import Card from './Card';
+import Card from './Card';
 import CardPurchase from './CardPurchase';
-// import Divider from './Divider';
+import Divider from './Divider';
 import Footer from './Footer';
 import Header from './Header';
 // import InputText from './InputText';
@@ -23,9 +23,9 @@ export {
   MyLink,
   Address,
   Base,
-  // Card,
+  Card,
   CardPurchase,
-  // Divider,
+  Divider,
   Footer,
   Header,
   // InputText,

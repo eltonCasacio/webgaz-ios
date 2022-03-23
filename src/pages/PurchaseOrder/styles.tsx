@@ -1,17 +1,17 @@
 import styled from 'styled-components/native';
-import Theme from '../../styles/theme';
+import {theme} from '../../styles/theme';
 
 export const Wrapper = styled.SafeAreaView`
   flex: 1;
   padding: 0 15px;
-  background-color: ${Theme.colors.primary};
+  background-color: ${theme.Colors.Backgroud};
 `;
 
 export const ScrollView = styled.ScrollView``;
 
 export const Label = styled.Text`
   align-self: center;
-  color: ${Theme.colors.white};
+  color: ${theme.Colors.White};
   font-size: 25px;
   font-weight: bold;
   padding-top: 15px;
@@ -24,13 +24,13 @@ export const SearchWrapper = styled.View`
   padding: 0 15px;
   margin: 0 3px 30px;
   border-radius: 5px;
-  background-color: ${Theme.colors.secondary};
-  border-color: ${Theme.colors.gray};
+  background-color: ${theme.Colors.secondary};
+  border-color: ${theme.Colors.gray};
   border-width: 0.3px;
 `;
 export const SearchInput = styled.TextInput`
   width: 100%;
-  color: ${Theme.colors.text};
+  color: ${theme.Colors.text};
   font-size: 18px;
 `;
 export const SearchIcon = styled.Image`
@@ -46,6 +46,6 @@ export const Goback = styled.TouchableOpacity`
 `;
 
 export const GobackText = styled.Text`
-  color: ${Theme.colors.white};
+  color: ${theme.Colors.White};
   font-size: 14px;
 `;

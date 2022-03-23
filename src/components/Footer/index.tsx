@@ -23,7 +23,7 @@ export default function Footer() {
         <AntDesign name="shoppingcart" size={35} color="#fff" />
       </S.Menu>
 
-      <S.Menu onPress={() => linkTo('/purchase-orde')}>
+      <S.Menu onPress={() => linkTo('/purchase-order')}>
         <S.Image source={require('../../assets/pedidos.png')} />
       </S.Menu>
 
