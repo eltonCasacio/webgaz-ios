@@ -1,14 +1,14 @@
 import React from 'react';
 // import {useAuth} from '../contexts/auth';
 
-// import AppRoutes from './app.routes';
-import AuthRoutes from './auth.routes';
+import AppRoutes from './app.routes';
+// import AuthRoutes from './auth.routes';
 
 // import Loading from '../components/Loading';
 // import {Base} from '../components';
 
 const Routes: React.FC = () => {
-  return <AuthRoutes />;
+  return <AppRoutes />;
   //   const {signed, loading} = useAuth();
 
   //   if (loading) return <Loading size="small" color="#f00" />;

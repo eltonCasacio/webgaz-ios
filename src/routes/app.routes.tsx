@@ -6,7 +6,12 @@ const AppStack = createNativeStackNavigator();
 
 const AppRoutes: React.FC = () => {
   return (
-    <AppStack.Navigator>
+    <AppStack.Navigator
+      screenOptions={{
+        headerShown: false,
+        contentStyle: {backgroundColor: 'transparent'},
+        animation: 'none',
+      }}>
       <AppStack.Screen name="Home" component={HomeScreen} />
     </AppStack.Navigator>
   );

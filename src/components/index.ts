@@ -14,9 +14,9 @@ import UseInfo from './signup/UseInfo';
 import Rede from './signup/Rede';
 // import CardPurchaseDetails from './CardPurchaseDetails';
 // import CardNotification from './CardNotification';
-// import LinkWhatsapp from './LinkWhatsapp';
+import LinkWhatsapp from './LinkWhatsapp';
 // import SelectPurchase from './SelectPurchase';
-// import Carousel from './Carousel';
+import Carousel from './Carousel';
 
 export {
   Buttom,
@@ -35,7 +35,7 @@ export {
   Rede,
   // CardPurchaseDetails,
   // CardNotification,
-  // LinkWhatsapp,
+  LinkWhatsapp,
   // SelectPurchase,
-  // Carousel
+  Carousel,
 };
