@@ -39,7 +39,8 @@ const Purchase: React.FC = ({navigation}: any) => {
   } as PurchaseProps);
 
   function validate() {
-    return purchase.totalPrice;
+    // return purchase.totalPrice;
+    return true;
   }
 
   async function handleNextStep() {
