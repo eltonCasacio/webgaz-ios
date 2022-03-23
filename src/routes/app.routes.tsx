@@ -6,6 +6,8 @@ import PurchaseScreen from '../pages/Purchase';
 import PurchaseShipping from '../pages/PurchaseShipping';
 import PurchaseConfirmation from '../pages/PurchaseConfirmation';
 import ProfileUser from '../pages/ProfileUser';
+import PurchaseOrderDetails from '../pages/PurchaseOrderDetails';
+import PurchaseOrder from '../pages/PurchaseOrder';
 
 const AppStack = createNativeStackNavigator();
 
@@ -22,6 +24,8 @@ const AppRoutes: React.FC = () => {
       <AppStack.Screen name="purchase" component={PurchaseScreen} />
       <AppStack.Screen name="shipping" component={PurchaseShipping} />
       <AppStack.Screen name="confirm" component={PurchaseConfirmation} />
+      <AppStack.Screen name="purchase-order" component={PurchaseOrder} />
+      <AppStack.Screen name="details" component={PurchaseOrderDetails} />
     </AppStack.Navigator>
   );
 };

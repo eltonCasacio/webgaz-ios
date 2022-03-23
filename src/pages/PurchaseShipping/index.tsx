@@ -97,7 +97,7 @@ const PurchaseShipping: React.FC = ({route, navigation}: any) => {
         />
       </S.Form>
 
-      <Buttom color="buttonDefault" title="PROXIMO" callback={handleNextStep} />
+      <Buttom color="ButtonDefault" title="PROXIMO" callback={handleNextStep} />
 
       <S.Goback onPress={() => navigation.goBack()}>
         <S.GobackText>VOLTAR</S.GobackText>
