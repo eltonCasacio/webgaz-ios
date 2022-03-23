@@ -2,7 +2,7 @@ import Base from './Base';
 import Buttom from './Buttom';
 import MyLink from './MyLink';
 // import Card from './Card';
-// import CardPurchase from './CardPurchase';
+import CardPurchase from './CardPurchase';
 // import Divider from './Divider';
 import Footer from './Footer';
 import Header from './Header';
@@ -24,7 +24,7 @@ export {
   Address,
   Base,
   // Card,
-  // CardPurchase,
+  CardPurchase,
   // Divider,
   Footer,
   Header,

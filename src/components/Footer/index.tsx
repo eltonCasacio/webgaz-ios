@@ -11,19 +11,19 @@ export default function Footer() {
 
   return (
     <S.Wrapper>
-      <S.Menu onPress={() => linkTo('/Home')}>
+      <S.Menu onPress={() => linkTo('/home')}>
         <S.Image source={require('../../assets/home.png')} />
       </S.Menu>
 
-      <S.Menu onPress={() => linkTo('/perfil')}>
+      <S.Menu onPress={() => linkTo('/profile')}>
         <S.Image source={require('../../assets/userList.png')} />
       </S.Menu>
 
-      <S.Menu onPress={() => linkTo('/pedido')}>
+      <S.Menu onPress={() => linkTo('/purchase')}>
         <AntDesign name="shoppingcart" size={35} color="#fff" />
       </S.Menu>
 
-      <S.Menu onPress={() => linkTo('/pedidos')}>
+      <S.Menu onPress={() => linkTo('/purchases')}>
         <S.Image source={require('../../assets/pedidos.png')} />
       </S.Menu>
 

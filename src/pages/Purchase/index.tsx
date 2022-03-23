@@ -39,8 +39,7 @@ const Purchase: React.FC = ({navigation}: any) => {
   } as PurchaseProps);
 
   function validate() {
-    // return purchase.totalPrice;
-    return true;
+    return purchase.totalPrice;
   }
 
   async function handleNextStep() {
@@ -49,8 +48,8 @@ const Purchase: React.FC = ({navigation}: any) => {
     if (validate()) {
       const linkTo =
         purchase.deliveryType === ShippingEnum.RETIRADA
-          ? 'pedido-transportadora'
-          : 'confirmar-pedido';
+          ? 'shipping'
+          : 'confirm';
 
       navigation.navigate(linkTo, {
         purchaseOrder: purchase,
@@ -164,7 +163,7 @@ const Purchase: React.FC = ({navigation}: any) => {
           )}
         </S.PaymentInputWrapper>
       </S.Payment>
-      <Buttom color="buttonDefault" title="PROXIMO" callback={handleNextStep} />
+      <Buttom color="ButtonDefault" title="PROXIMO" callback={handleNextStep} />
     </S.Wrapper>
   );
 };

@@ -35,7 +35,7 @@ const ModalUserInfo: React.FC<ModalUserInfoProps> = params => {
         <View style={styles.menu}>
           <TouchableOpacity
             style={styles.menuItem}
-            onPress={() => linkTo('/perfil')}>
+            onPress={() => linkTo('/profile')}>
             <AntDesign name="database" size={20} color="#fff" />
             <Text style={styles.modalMessageText}>
               - Informações do Usuário
@@ -46,21 +46,21 @@ const ModalUserInfo: React.FC<ModalUserInfoProps> = params => {
             <>
               <TouchableOpacity
                 style={styles.menuItem}
-                onPress={() => linkTo('/inicio')}>
+                onPress={() => linkTo('/home')}>
                 <Feather name="dollar-sign" size={20} color="#ffffffde" />
                 <Text style={styles.modalMessageText}>- Tabela de Preços</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.menuItem}
-                onPress={() => linkTo('/pedido')}>
+                onPress={() => linkTo('/purchase')}>
                 <AntDesign name="shoppingcart" size={20} color="#fff" />
                 <Text style={styles.modalMessageText}>- Fazer Pedido</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.menuItem}
-                onPress={() => linkTo('/pedidos')}>
+                onPress={() => linkTo('/purchases')}>
                 <Entypo name="list" size={20} color="#ffffffde" />
                 <Text style={styles.modalMessageText}>- Pedidos</Text>
               </TouchableOpacity>

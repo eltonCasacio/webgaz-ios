@@ -1,3 +1,4 @@
+/* eslint-disable dot-notation */
 import React, {createContext, useEffect, useState, useContext} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Toast from 'react-native-toast-message';

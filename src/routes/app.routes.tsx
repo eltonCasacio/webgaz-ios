@@ -17,23 +17,11 @@ const AppRoutes: React.FC = () => {
         contentStyle: {backgroundColor: 'transparent'},
         animation: 'none',
       }}>
-      <AppStack.Screen name="Home" component={HomeScreen} />
-      <AppStack.Screen name="Purchase" component={PurchaseScreen} />
-      <AppStack.Screen
-        name="pedido-transportadora"
-        component={PurchaseShipping}
-        options={{title: 'Informações da Transportadora'}}
-      />
-      <AppStack.Screen
-        name="confirmar-pedido"
-        component={PurchaseConfirmation}
-        options={{title: 'Confirmar Pedido'}}
-      />
-      <AppStack.Screen
-        name="perfil"
-        component={ProfileUser}
-        options={{title: 'Perfil'}}
-      />
+      <AppStack.Screen name="home" component={HomeScreen} />
+      <AppStack.Screen name="profile" component={ProfileUser} />
+      <AppStack.Screen name="purchase" component={PurchaseScreen} />
+      <AppStack.Screen name="shipping" component={PurchaseShipping} />
+      <AppStack.Screen name="confirm" component={PurchaseConfirmation} />
     </AppStack.Navigator>
   );
 };

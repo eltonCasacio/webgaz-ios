@@ -13,7 +13,7 @@ const Base: React.FC<BaseProps> = props => {
     <S.Wrapper>
       {!!signed && <Header />}
       {props.children}
-      {user?.status === 'ACTIVE' && <Footer />}
+      {user?.status !== 'ACTIVE' && <Footer />}
     </S.Wrapper>
   );
 };
