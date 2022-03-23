@@ -5,7 +5,7 @@ import API from './api';
 export const loadPurchase = async (params: GetPurchase) => {
   const response = await API.post('order-price', params);
   let {price} = response.data;
-  return price;
+  return price || 0;
 };
 
 export const confirmPurchase = async (params: ConfirmPurchaseProps) => {

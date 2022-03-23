@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   function startTimer() {
     return setInterval(async () => {
       setHour(getHour());
-    }, 40000);
+    }, 240000);
   }
 
   React.useEffect(() => {
@@ -94,8 +94,8 @@ const Home: React.FC = () => {
         </S.CardPriceFuel>
 
         <S.PurchaseButton
-          disabled={user?.status !== 'ACTIVE'}
-          onPress={() => linkTo('/pedido')}>
+          disabled={user?.status === 'ACTIVE'}
+          onPress={() => linkTo('/Purchase')}>
           <S.PurchaseButtonText>FAZER PEDIDO</S.PurchaseButtonText>
         </S.PurchaseButton>
       </S.CardPrice>
