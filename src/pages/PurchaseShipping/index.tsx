@@ -39,7 +39,7 @@ const PurchaseShipping: React.FC = ({route, navigation}: any) => {
 
   function handleNextStep() {
     if (validateFields()) {
-      navigation.navigate('confirmar-pedido', {
+      navigation.navigate('confirm', {
         purchaseOrder: purchaseOrder,
         shippingCompany: shipping,
       });

@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {Platform} from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
-
 import {GetPurchase, Purchase as PurchaseProps} from '../../types/Purchase';
 import {formatCurrency, formatDate} from '../../utils';
 import {loadPurchase} from '../../service/purchase';
@@ -26,7 +23,6 @@ currentDate.setDate(currentDate.getDate() + 1);
 
 const Purchase: React.FC = ({navigation}: any) => {
   const {user} = useAuth();
-  const [show, setShow] = useState(false);
   const [price, setPrice] = useState(0);
   const [purchase, setPurchase] = useState({
     qtdLiters: 1,
@@ -60,12 +56,6 @@ const Purchase: React.FC = ({navigation}: any) => {
   function updateFields(name: string, value: any) {
     setPurchase({...purchase, [name]: value});
   }
-
-  const onChangeDatePicker = (event: any, selectedDate: any) => {
-    const auxDate = selectedDate || purchase.deliveryDate;
-    setShow(Platform.OS === 'ios');
-    updateFields('deliveryDate', auxDate);
-  };
 
   async function updatePrice(params: GetPurchase) {
     let value = await loadPurchase(params);
@@ -145,22 +135,11 @@ const Purchase: React.FC = ({navigation}: any) => {
 
         <S.PaymentInputWrapper>
           <S.PaymentText>Data da Entrega</S.PaymentText>
-          <S.PaymentInputDate onPress={() => setShow(true)}>
+          <S.PaymentInputDate>
             <S.PaymentDateText>
               {formatDate(new Date(purchase?.deliveryDate))}
             </S.PaymentDateText>
           </S.PaymentInputDate>
-          {show && (
-            <DateTimePicker
-              minimumDate={currentDate}
-              testID="dateTimePicker"
-              value={new Date(purchase?.deliveryDate)}
-              mode={'date'}
-              is24Hour={true}
-              display="default"
-              onChange={onChangeDatePicker}
-            />
-          )}
         </S.PaymentInputWrapper>
       </S.Payment>
       <Buttom color="ButtonDefault" title="PROXIMO" callback={handleNextStep} />

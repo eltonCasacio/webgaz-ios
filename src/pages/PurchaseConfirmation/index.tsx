@@ -136,7 +136,7 @@ const PurchaseConfirmation: React.FC = ({route, navigation}: any) => {
 
       <S.Button>
         <Buttom
-          color="buttonConfirm"
+          color="ButtonConfirm"
           title="CONFIRMAR"
           callback={handleConfirm}
         />
