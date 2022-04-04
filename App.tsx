@@ -1,15 +1,15 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
-import Signin from './src/pages/Signin';
+import {NavigationContainer} from '@react-navigation/native';
+import Routes from './src/routes';
+import {AuthProvider} from './src/contexts/auth';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <Signin />
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
   );
 };
 

@@ -1,0 +1,195 @@
+import styled, {css} from 'styled-components/native';
+import {theme} from '../../styles/theme';
+import {Dimensions} from 'react-native';
+
+const {width, height} = Dimensions.get('screen');
+const wFraction = width / width;
+
+export const Wrapper = styled.View`
+  flex: 1;
+  justify-content: space-around;
+  background-color: ${theme.Colors.Backgroud};
+`;
+
+export const WrapperCarousel = styled.View`
+  ${() => css`
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: ${width / 2.5}px;
+  `}
+`;
+
+export const Image = styled.Image`
+  width: auto;
+  height: 100%;
+  border-radius: 12px;
+  margin: 0 -${wFraction * 10}px; ;
+`;
+
+export const Order = styled.TouchableOpacity`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+export const SendDocument = styled.Text`
+  text-align: center;
+`;
+export const OrderIcon = styled.View``;
+
+export const CardPrice = styled.View`
+  ${() => css`
+    align-self: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 10px;
+    border: solid 2px #a4a2a24d;
+    background-color: ${theme.Colors.secondary};
+    height: ${height / 2.5}px;
+    width: ${width - 20}px;
+  `}
+`;
+
+export const CardPriceIcon = styled.View``;
+
+export const CardPriceTitle = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+`;
+
+export const CardPriceTitleText = styled.Text`
+  color: ${theme.Colors.White};
+  margin-left: 5px;
+  font-size: ${(height / height) * 22}px;
+  font-weight: bold;
+`;
+
+export const FuelText = styled.Text`
+  font-size: 20px;
+`;
+
+export const FuelPrice = styled(FuelText)`
+  font-weight: bold;
+`;
+
+export const PurchaseText = styled.Text`
+  color: aliceblue;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px;
+`;
+
+export const CardPriceDate = styled.View`
+  ${() => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0 0;
+  `}
+`;
+
+export const CardPriceDateItem = styled.View`
+  ${() => css`
+    align-items: center;
+    width: 48%;
+    border-radius: 5px;
+    padding: 5px 0;
+    border: solid 2px #a4a2a24d;
+  `}
+`;
+
+export const CardPriceDateHourLabel = styled.Text`
+  ${() => css`
+    color: ${theme.Colors.gray};
+    font-size: ${wFraction * 14}px;
+  `}
+`;
+
+export const CardPriceDateHour = styled.Text`
+  ${() => css`
+    color: ${theme.Colors.White};
+    font-size: ${wFraction * 16}px;
+  `}
+`;
+
+export const CardPriceFuel = styled.View`
+  ${() => css`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+  `}
+`;
+
+export const CardPriceFuelLabel = styled.Text`
+  ${() => css`
+    color: ${theme.Colors.gray};
+    font-size: ${(height / height) * 20}px;
+    text-transform: uppercase;
+  `}
+`;
+
+export const CardPriceFuelPrice = styled.Text`
+  ${() => css`
+    color: ${theme.Colors.White};
+    font-size: ${(height / height) * 20}px;
+    font-weight: bold;
+  `}
+`;
+
+export const WhatsApp = styled.View``;
+
+export const WhatsAppText = styled.Text`
+  color: ${theme.Colors.White};
+  font-size: 16px;
+`;
+
+export const PurchaseButton = styled.TouchableOpacity``;
+
+export const PurchaseButtonText = styled.Text`
+  color: ${theme.Colors.White};
+  font-size: ${wFraction * 16}px;
+  font-weight: bold;
+  text-align: center;
+  border-top-width: 1px;
+  border-top-color: #a4a2a24d;
+  padding-top: ${(height / height) * 16}px;
+`;
+
+export const OperationDateItem = styled.View`
+  align-items: center;
+  flex-direction: row;
+  margin: 0 10px;
+`;
+
+export const Operation = styled.View`
+  align-items: center;
+  margin: 20px;
+`;
+
+export const OperationTitleText = styled.Text`
+  color: ${theme.Colors.White};
+  font-size: 14px;
+`;
+
+export const OperationDate = styled.View`
+  flex-direction: row;
+`;
+
+export const OperationHourLabel = styled.Text`
+  ${() => css`
+    color: ${theme.Colors.lightGray};
+    font-size: 14px;
+  `}
+`;
+
+export const MessageError = styled.Text`
+  color: ${theme.Colors.ButtonDanger};
+  font-size: 14px;
+  text-align: center;
+`;
