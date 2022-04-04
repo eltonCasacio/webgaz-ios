@@ -2,10 +2,10 @@ import styled, {css} from 'styled-components/native';
 import {theme} from '../../styles/theme';
 import {Dimensions} from 'react-native';
 
-const {width, height} = Dimensions.get('screen');
+const {width, height} = Dimensions.get('window');
 const wFraction = width / width;
 
-export const Wrapper = styled.View`
+export const Wrapper = styled.SafeAreaView`
   flex: 1;
   justify-content: space-around;
   background-color: ${theme.Colors.Backgroud};

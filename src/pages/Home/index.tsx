@@ -94,7 +94,7 @@ const Home: React.FC = () => {
         </S.CardPriceFuel>
 
         <S.PurchaseButton
-          disabled={user?.status === 'ACTIVE'}
+          disabled={user?.status !== 'ACTIVE'}
           onPress={() => linkTo('/purchase')}>
           <S.PurchaseButtonText>FAZER PEDIDO</S.PurchaseButtonText>
         </S.PurchaseButton>
