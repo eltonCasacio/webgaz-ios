@@ -17,7 +17,7 @@ import Rede from './signup/Rede';
 import LinkWhatsapp from './LinkWhatsapp';
 import SelectPurchase from './SelectPurchase';
 import Carousel from './Carousel';
-
+import DateComponent from './DateComponent';
 export {
   Buttom,
   MyLink,
@@ -38,4 +38,5 @@ export {
   LinkWhatsapp,
   SelectPurchase,
   Carousel,
+  DateComponent,
 };
