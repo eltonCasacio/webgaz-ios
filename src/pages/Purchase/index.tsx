@@ -22,6 +22,7 @@ const currentDate = new Date();
 currentDate.setDate(currentDate.getDate() + 1);
 
 const Purchase: React.FC = ({navigation}: any) => {
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const {user} = useAuth();
   const [price, setPrice] = useState(0);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -64,6 +65,7 @@ const Purchase: React.FC = ({navigation}: any) => {
   }
 
   function changeDate(date: Date) {
+    setSelectedDate(date);
     updateFields('deliveryDate', date);
   }
 
@@ -147,7 +149,7 @@ const Purchase: React.FC = ({navigation}: any) => {
           <S.PaymentInputWrapper>
             <S.PaymentText>Data da Entrega</S.PaymentText>
             <DateComponent
-              date={new Date(purchase?.deliveryDate)}
+              date={selectedDate}
               onChange={changeDate}
               open={showDatePicker}
               setOpen={setShowDatePicker}

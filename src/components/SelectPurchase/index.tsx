@@ -95,17 +95,16 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingHorizontal: 15,
 
-    borderRadius: 10,
+    borderRadius: 5,
     backgroundColor: theme.Colors.BackgourndInput,
     shadowColor: '#ffffff',
     shadowOffset: {
-      width: 10,
-      height: 2,
+      width: 0,
+      height: 0,
     },
-    shadowOpacity: 0.5,
     shadowRadius: 1,
     elevation: 5,
-    borderWidth: 1,
+    borderWidth: 0.5,
     borderColor: '#ffffff73',
   },
   button: {
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
     borderRadius: 200,
     marginVertical: 10,
     padding: 10,
-    backgroundColor: '#ffffff47',
+    cursor: 'pointer',
   },
   menuItem: {
     flexDirection: 'row',
